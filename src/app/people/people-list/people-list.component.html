@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let p of people">
+      <tr [ngClass]="{'table-success': p.age >= 18 , 'table-danger': p.age < 18}">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.name}}</td>
+        <td>{{p.age || 'Unknown'}}</td>
+        <td><button (click)="removeFromList(p.id)" class="btn btn-danger">Remove</button></td>
+      </tr>
+  </ng-container>
+  </tbody>
+</table>

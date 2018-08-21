@@ -1,3 +1,5 @@
+import { PeopleModule } from './people/people.module';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,7 +10,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    PeopleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
